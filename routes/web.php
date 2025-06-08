@@ -32,7 +32,7 @@ Route::get('/age/{birthYear}', [AgeCalculatorController::class, 'calculate']);
 
 
 
-/*
+
 Route::get('/posts', [homeController::class, "index"] 
 );
 
@@ -45,7 +45,8 @@ Route::get('/post/edit', [homeController::class, "edit"]
 Route::get('/post/{id}/{categoria}', [homeController::class, "show"] 
 
 );
-ruta asignada con un controlador 
+//ruta asignada con un controlador 
+/*
 Route::get('/post', [homeController::class, "mensaje"] 
 );
 

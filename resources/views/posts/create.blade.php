@@ -17,8 +17,11 @@
                 
                 <a href="{{ url('/') }}" class="btn btn-primary mt-3">Volver al Inicio</a>
             </div>
-        </div>
+        </div> 
+  
     </div>
+ 
+
 
     <!-- Script opcional de Bootstrap (para componentes interactivos como modales, etc.) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
