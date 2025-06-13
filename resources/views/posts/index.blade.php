@@ -19,7 +19,7 @@
         </div>
 
         {{-- Aquí se muestra el componente de alerta --}}
-        <x-alert type="danger">
+        <x-alert type="warning">
             <x-slot name="titulo">Lista de posts</x-slot>
             <x-slot name="contenido">Esta es la informacion de todos los posts</x-slot>
         </x-alert>

@@ -4,6 +4,10 @@ use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 
 
+Route::view('/tarea2/ejercicio1', 'tarea2.ejercicio1');
+Route::view('/tarea2/ejercicio2', 'tarea2.ejercicio2');
+Route::view('/tarea2/ejercicio3', 'tarea2.ejercicio3');
+Route::view('/tarea2/ejercicio4', 'tarea2.ejercicio4');
 
 
 Route::get('/', function () {
