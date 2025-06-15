@@ -21,12 +21,12 @@ class homeController extends Controller
    return view('posts.edit');
  }
 
-function show($id,$categoria)
-
- {
-    return view('posts.show',["post"=> $id, "categoria"=> $categoria]);
- }
-
+   public function show($id, $categoria)
+    {
+        // Aquí simplemente se pasa la info a la vista
+        return view('posts.show', compact('id', 'categoria'));
+    }
+}
  
 
-}
+
