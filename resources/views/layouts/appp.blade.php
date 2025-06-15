@@ -82,10 +82,28 @@
         @yield('hero')
     @endif
 
+<div class="d-flex">
+    <!-- Sidebar responsive -->
+    <div id="sidebar" class="bg-dark text-white p-3 d-none d-md-block" style="width: 240px; min-height: 100vh;">
+        @include('components.sidebar')
+    </div>
+
     <!-- Contenido principal -->
-    <main class="container py-4">
-        @yield('content')
-    </main>
+    <div class="flex-grow-1">
+        <!-- Botón toggle solo visible en móviles -->
+        <nav class="navbar navbar-dark bg-dark d-md-none px-3">
+            <button class="btn btn-outline-light" id="toggleSidebar">
+                <i class="bi bi-list"></i> Menú
+            </button>
+        </nav>
+
+        <main class="p-4">
+            @yield('content')
+        </main>
+    </div>
+</div>
+
+
 
     <!-- Footer -->
     <footer class="text-center py-4 mt-5 border-top border-secondary">
@@ -101,5 +119,21 @@
     @hasSection('scripts')
         @yield('scripts')
     @endif
+
+    <script>
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleBtn?.addEventListener('click', () => {
+        sidebar.classList.toggle('d-none');
+        sidebar.classList.toggle('position-absolute');
+        sidebar.classList.toggle('z-index-1000');
+        sidebar.style.top = '0';
+        sidebar.style.left = '0';
+        sidebar.style.width = '240px';
+        sidebar.style.minHeight = '100vh';
+    });
+</script>
+
 </body>
 </html>
